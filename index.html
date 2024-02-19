@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        input{
+            border-radius: 10px;
+        }
+        body {
+            background-color: linear-gradient(to top right, #33ccff, #ff99cc);;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Increment calculator</h1>
+    <div>
+        <label for="">Salary:</label>
+        <input type="text" id="bsal">
+    </div>
+    <br>
+    <div>
+        <label for="">Project Reting:</label>
+        <input type="text" id="reat1">
+    </div>
+    <br>
+    <div>
+        <label for="">Technical Rating:</label>
+        <input type="text" id="reat2">
+    </div>
+    <br>
+    <div>
+        <label for="">performance  Rating:</label>
+        <input type="text" id="reat3">
+    </div>
+    <br>
+    <div>
+        <label for="">Increment:-</label>
+        <span id="ince"></span>
+    </div>
+    <br>
+    <button onclick="final()">Increment Amount</button>
+</div>
+    <script>
+        function final()
+        {
+        let bsale = +(document.getElementById("bsal").value);
+        let ret1 = +(document.getElementById("reat1").value);
+        let ret2 = +(document.getElementById("reat2").value);
+        let ret3 = +(document.getElementById("reat3").value);
+        let avgret = (ret1 + ret2 + ret3)/3;
+
+        if(avgret >= 9)
+        {
+            document.getElementById("ince").innerText = bsale*0.2 ;
+        }
+        else if(avgret >= 8 && avgret < 9)
+        {
+            document.getElementById("ince").innerText = bsale*0.1 ;
+        }
+        else if(avgret >= 5 && avgret < 8)
+        {
+            document.getElementById("ince").innerText = bsale*0.05 ;
+        }
+        else
+        {
+            document.getElementById("ince").innerText = 0 ;
+        }
+        }
+
+    </script>
+</body>
+</html>
